@@ -1,0 +1,120 @@
+* {
+	margin: 0;
+	background-color: #076de3;
+        color: #FDC745;
+        font-family: Arial, Helvetica, sans-serif;
+}
+
+#welcome-screen {
+	
+}
+
+#input-screen {
+	display: none;	
+}
+
+#output-screen {
+	display: none;
+	margin: 40px;
+}
+
+img {
+        margin: 20px 0 0 20px;
+	width: 305.5px;
+        height: 184.5px;
+	border-top-left-radius: 30px;
+	border-bottom-right-radius: 30px;
+}
+
+h1 {
+        margin: 92px 0 150px 0;
+	text-align: center;
+}
+
+span.dev {
+        font-size: 18px;
+        font-style: italic;
+        font-weight: normal;
+        text-decoration: none;
+}
+
+button {
+        display: block;
+        margin: 0 auto;
+        padding: 20px 40px;
+        font-size: 20px;
+        font-weight: 800;
+        color: #1e1e1e;
+        background-color: #FDC745;
+	border: 1px solid black;
+        border-radius: 14px;
+}
+
+button:hover {
+        color: #1e1e1e;
+        background-color: #FF8904;
+}
+
+button:focus {
+        color: #1e1e1e;
+        background-color: #05DF72;
+}
+
+form {
+	margin-left:50px;
+}
+
+p.inputData {
+	margin: 20px 0 30px;
+	font-size: 26px;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+	letter-spacing: 3px;
+}
+
+#border {
+	margin: -20px 40px 10px;
+	padding: 10px 10px 0;
+	border: 2px solid #FDC745;
+	border-radius: 10px;
+}
+
+label {
+	font-weight: bold;
+}
+
+p.note {
+	margin: -16px 0 22px;
+}
+
+/*#input-screen {
+	display: none;
+}*/
+
+input, textarea, select {
+	margin: 3px 0 10px;
+	background-color: #e8f3f9;
+	border: none;
+	color: #333;
+}
+
+select,
+textarea, 
+input[type="date"] {
+	color: #333;
+}
+
+input[type="radio"] {
+	transfom: scale(1.5);	//Do NOT afect the size of the radio buttons ???!!!
+	accent-color: black;
+}
+
+
+table {
+	border-collapse: collapse;
+}
+
+td {
+	border: 2px solid #FDC745;
+}

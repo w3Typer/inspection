@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="bg">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="./assets/images/favicon.png" />
+    <title>Инспекционна проверка</title>
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
+
+  <body>
+    <!--  /////////// НАЧАЛЕН ЕКРАН ///////////  -->
+    <div id="welcome-screen">	
+      <img
+        src="./assets/images/inspection.png"
+        alt="Picture - inspection of documents"
+        title="Inspection of documents"
+        id="logoImg"
+      />
+
+      <h1 id="h1">
+        Д Е С К Т О П&nbsp;&nbsp;&nbsp;П Р И Л О Ж Е Н И Е<br />
+        за оптимизиране многократното въвеждане на еднотипни данни <br />
+        в работа на инспектор от отдел ИД на ГДМКС <br />
+        при извършване на инспекционни проверки <br />
+        <span class="dev">Разработка на ст. инспектор И. Христов ( v.1.2.4 )</span>
+      </h1>
+
+      <button type="button" id="start-button">Начало на проверката</button>
+    </div>
+
+
+    <!--  /////////// ЕКРАН ЗА ВЪВЕЖДАНЕ НА ДАННИ  /////////// -->
+    <div id="input-screen">	
+      <p class="inputData">Данни за проверката</p>
+      <form id="border" class="inputData">
+
+        <label for="prov-vid-1">Проверка тип:</label>&nbsp;
+        <select id="prov-vid-1" name="prov-vid-1" >
+	    <option value="" disabled selected hidden>-Избери-</option>
+	    <option value="нормална">Нормална</option>
+  	    <option value="допълнителна">Допълнителна</option>
+  	    <option value="спешна">Спешна</option>
+  	    <option value="планова">Планова</option>
+        </Select><br />
+
+        <label for="signal-nomer-data">Сигнал вх. №:</label>&nbsp;
+        <input type="text" id="signal-nomer-data" name="signal-nomer-data" placeholder="XX-XX-XXXX / ДД.ММ.ГГГГ" /><br />
+
+        <label for="pismo-nomer-data">Писмо вх. №:</label>&nbsp;&nbsp;
+        <input type="text" id="pismo-nomer-data" name="pismo-nomer-data" placeholder="П(Ре)-XXXX / ДД.ММ.ГГГГ" /><br />      
+      
+        <label for="prov-vid-2">Проверка вид:</label>&nbsp;
+        <select id="prov-vid-2" name="prov-vid-2" >
+	    <option value="" disabled selected hidden>-Избери-</option>
+	    <option value="G">По жалба</option>
+  	    <option value="P">По писмо</option>
+  	    <option value="XXX">Друг вид</option>
+        </Select><br />
+
+        <label for="prov-otnosno-BG">Проверката е за (на български език)<sup>*</sup>:</label><br />
+        <textarea id="prov-otnosno-BG" name="prov-otnosno-BG" rows="3" colls="320" placeholder="напр. роуминг в Турция" rows="4" cols="50"></textarea><br />   
+
+        <label for="prov-оtnosno-EN">Проверката е за (1-2 думи на английски език)<sup>*</sup>:</label>&nbsp;
+        <input type="text" id="prov-оtnosno-EN" name="prov-оtnosno-EN" placeholder="напр. Roaming" /><br />   
+
+        <label for="prov-srok">Краен срок за проверката<sup>*</sup>:</label>&nbsp;
+        <input type="date" id="prov-srok" name="prov-srok" /><br />  
+       
+        <label for="druj-srok">Краен срок за проверяваното дружество<sup>*</sup>:</label>&nbsp;
+        <input type="date" id="druj-srok" name="druj-srok" /><br /> 
+
+        <label for="druj1-EN">Проверявано дружество 1 на английски<sup>*</sup>:</label>&nbsp;
+        <input type="text" id="druj1-EN" name="druj1-EN" placeholder="напр. A1 / Vivacom / Yettel" /><br />   
+
+        <label for="druj2-EN">Проверявано дружество 2 на английски:</label>&nbsp;
+        <input type="text" id="druj2-EN" name="druj2-EN" placeholder="Dr2" /><br />   
+
+        <label for="druj3-EN">Проверявано дружество 3 на английски:</label>&nbsp;
+        <input type="text" id="druj3-EN" name="druj3-EN" placeholder="Dr3" /><br />   
+
+        <label for="insp1">Проверката е възложена на<sup>*</sup></label>&nbsp;
+        <select id="insp1" name="insp1">
+  	    <option value="" disabled selected hidden>-Избери-</option>
+	    <option value="Михаела Богданова">М.Богданова</option>
+  	    <option value="Анатоли Манолов">А.Манолов</option>
+  	    <option value="Олга Кирилова">О.Кирилова</option>
+  	    <option value="Христо Дюлгяров">Х.Дюлгяров</option>
+  	    <option value="Пламен Владов">П.Владов</option>
+  	    <option value="Катя Сивева">К.Сивева</option>
+  	    <option value="Станимир Василев">С.Василев</option>
+  	    <option value="Иванка Кирилова">И.Кирилова</option>
+  	    <option value="Ивайло Христов">И.Христов</option>
+	    <option value="Михаил Григоров">М.Григоров</option>
+        </select>
+        <label for="insp2"> и </label>
+        <select id="insp2" name="insp2" >
+  	    <option value="" disabled selected hidden>-Избери-</option>
+	    <option value="Михаела Богданова">М.Богданова</option>
+  	    <option value="Анатоли Манолов">А.Манолов</option>
+  	    <option value="Олга Кирилова">О.Кирилова</option>
+  	    <option value="Христо Дюлгяров">Х.Дюлгяров</option>
+  	    <option value="Пламен Владов">П.Владов</option>
+  	    <option value="Катя Сивева">К.Сивева</option>
+  	    <option value="Станимир Василев">С.Василев</option>
+  	    <option value="Иванка Кирилова">И.Кирилова</option>
+  	    <option value="Ивайло Христов">И.Христов</option>
+	    <option value="Михаил Григоров">М.Григоров</option>
+        </select><br />
+
+        <label>Пол на жалбоподателя<sup>*</sup>:</label>&nbsp;
+        <label>м
+            <input type="radio" name="jalb-pol" value="m">
+	</label>
+        <label>ж
+            <input type="radio" name="jalb-pol" value="f">
+	</label><br />
+
+        <label for="jalb-imena">Имена на жалбоподателя<sup>*</sup>:</label>&nbsp;
+        <input type="text" id="jalb-imena" name="jalb-imena" /><br />   
+
+        <label for="jalb-tel">Тел. на жалбоподателя:</label>&nbsp;
+        <input type="text" id="jalb-tel" name="jalb-tel" /><br />   
+
+        <label for="jalb-mail">Email на жалбоподателя:</label>&nbsp;
+        <input type="text" id="jalb-mail" name="jalb-mail" /><br />   
+
+        <label for="jalb-klientski-nomer">Кл. № на жалбоподателя:</label>&nbsp;
+        <input type="text" id="jalb-klientski-nomer" name="jalb-klientski-nomer" /><br />   
+
+        <label for="jalb-dogovor-nomer">№ на дог. на жалбоподателя:</label>&nbsp;
+        <input type="text" id="jalb-dogovor-nomer" name="jalb-dogovor-nomer" placeholder="XXXX/ДД.ММ.ГГГГ" /><br /><br /> 
+        
+        <p class="note"><i><u>Забележки</u>:<br />&nbsp;1. Означените със звезда (*) полета са задължителни!<br />
+&nbsp;2. Преди натискане на бутона, внимателно проверете коректността на попълнените данни и коригирайте при необходимост!  </i></p>
+      </form>
+
+      <button id="submit-button">Въведи</button>
+    </div>
+
+
+
+    <!--  /////////// ЕКРАН ЗА ИЗВЕЖДАНЕ НА ДАННИ  ///////////  -->
+    <div id="output-screen">	
+
+   	<!-- Основни данни за проверката -->
+	<p class="output-title"><b><u>ОСНОВНИ ДАННИ ЗА ПРОВЕРКАТА</u></b></p>
+	<p id="prov-obshti-danni"></p><br /><br />
+
+   	<!-- За писмото до проверяваното дружество -->     
+	<p class="output-title"><b><u>ЗА ПИСМОТО ДО ПРОВЕРЯВАНОТО ДРУЖЕСТВО</u></b></p>
+	<p id="pismo-do-druj"></p><br /><br />
+ 
+	<!-- За писмото до жалбоподателя -->
+ 	<p class="output-title"><b><u>ЗА ПИСМОТО ДО ЖАЛБОПОДАТЕЛЯ</u></b></p>	
+        <p id="pismo-do-jalbopodatel"></p><br /><br />
+
+	<!-- За КОНСТАТИВНИТЕ ПРОТОКОЛИ -->
+ 	<p class="output-title"><b><u>ЗА КОНСТАТИВНИТЕ ПРОТОКОЛИ</u></b></p>	
+        <p id="konstativni-protokoli"></p><br /><br />
+
+	<!-- За ПРИДРУЖИТЕЛНО ПИСМО ДО ДИРЕКЦИЯТА-ВЪЗЛОЖИТЕЛ -->
+ 	<p class="output-title"><b><u>ЗА ПРИДРУЖИТЕЛНО ПИСМО ДО ДИРЕКЦИЯТА-ВЪЗЛОЖИТЕЛ</u></b></p>	
+        <p id="pridrujitelno-pismo1"></p>
+	<p id="pridrujitelno-pismo2"></p>
+	<p id="pridrujitelno-pismo3"></p><br /><br />
+
+	<!-- За АИДА -->
+ 	<p class="output-title"><b><u>ЗА АИДА</u></b></p>	
+        <p id="aida"></p><br /><br />
+
+	<!-- За РЕГИСТЪРА С НОМЕРА НА КП -->
+ 	<p class="output-title"><b><u>ЗА РЕГИСТЪРА С НОМЕРА НА КП И ЗА ОТЧЕТА</u></b></p>	
+        <div id="registyr">
+	  <table>
+            <tr>
+              <td id="1-1"></td>
+              <td id="1-2"></td>
+              <td id="1-3"></td>
+              <td id="1-4"></td>
+              <td id="1-5"></td>
+              <td id="1-6"></td>
+              <td id="1-7"></td>
+              <td id="1-8"></td>
+              <td id="1-9"></td>
+              <td id="1-10"></td>
+              <td id="1-11"></td>
+              <td id="1-12"></td>
+            </tr>
+            <tr>
+              <td id="2-1"></td>
+              <td id="2-2"></td>
+              <td id="2-3"></td>
+              <td id="2-4"></td>
+              <td id="2-5"></td>
+              <td id="2-6"></td>
+              <td id="2-7"></td>
+              <td id="2-8"></td>
+              <td id="2-9"></td>
+              <td id="2-10"></td>
+              <td id="2-11"></td>
+              <td id="2-12"></td>
+            </tr>
+            <tr class="red-3">
+              <td id="3-1"></td>
+              <td id="3-2"></td>
+              <td id="3-3"></td>
+              <td id="3-4"></td>
+              <td id="3-5"></td>
+              <td id="3-6"></td>
+              <td id="3-7"></td>
+              <td id="3-8"></td>
+              <td id="3-9"></td>
+              <td id="3-10"></td>
+              <td id="3-11"></td>
+              <td id="3-12"></td>
+            </tr>
+            <tr class="red-4">
+              <td id="4-1"></td>
+              <td id="4-2"></td>
+              <td id="4-3"></td>
+              <td id="4-4"></td>
+              <td id="4-5"></td>
+              <td id="4-6"></td>
+              <td id="4-7"></td>
+              <td id="4-8"></td>
+              <td id="4-9"></td>
+              <td id="4-10"></td>
+              <td id="4-11"></td>
+              <td id="4-12"></td>
+            </tr>
+          </table>
+	</div><br /><br />
+
+	<!-- За СЕДМИЧНИЯ ПЛАН -->
+ 	<p class="output-title"><b><u>ЗА СЕДМИЧНИЯ ПЛАН</u></b></p>	
+        <div id="plan">
+	  <table>
+            <tr>
+              <td id="5-1"></td>
+              <td id="5-2"></td>
+              <td id="5-3"></td>
+              <td id="5-4"></td>
+              <td id="5-5"></td>
+              <td id="5-6"></td>
+              <td id="5-7"></td>
+              <td id="5-8"></td>
+              <td id="5-9"></td>
+              <td id="5-10"></td>
+              <td id="5-11"></td>
+             </tr>
+            <tr>
+              <td id="6-1"></td>
+              <td id="6-2"></td>
+              <td id="6-3"></td>
+              <td id="6-4"></td>
+              <td id="6-5"></td>
+              <td id="6-6"></td>
+              <td id="6-7"></td>
+              <td id="6-8"></td>
+              <td id="6-9"></td>
+              <td id="6-10"></td>
+              <td id="6-11"></td>
+            </tr>
+            <tr class="red-3">
+              <td id="7-1"></td>
+              <td id="7-2"></td>
+              <td id="7-3"></td>
+              <td id="7-4"></td>
+              <td id="7-5"></td>
+              <td id="7-6"></td>
+              <td id="7-7"></td>
+              <td id="7-8"></td>
+              <td id="7-9"></td>
+              <td id="7-10"></td>
+              <td id="7-11"></td>
+            </tr>
+            <tr class="red-4">
+              <td id="8-1"></td>
+              <td id="8-2"></td>
+              <td id="8-3"></td>
+              <td id="8-4"></td>
+              <td id="8-5"></td>
+              <td id="8-6"></td>
+              <td id="8-7"></td>
+              <td id="8-8"></td>
+              <td id="8-9"></td>
+              <td id="8-10"></td>
+              <td id="8-11"></td>
+            </tr>
+          </table>
+	</div><br /><br />
+     
+	<p class="note"><i><u>Забележка</u>: Ако желаете да съхраните изведените данни и текстове, запишете страницата чрез клавишната комбинация Ctrl + S на удобно за последващ достъп място на копютъра.</p></i>
+    </div>
+
+    <script src="./scripts/main.js"></script>
+  </body>
+</html>
