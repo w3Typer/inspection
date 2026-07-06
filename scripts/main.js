@@ -432,6 +432,7 @@ Pismo_${pismoNoBukviEN}-${pismoNoCifri}_${pismoData} <br /><br />
   // ============ ЗА ИМЕТО НА ФАЙЛА ============
   document.getElementById("ime-na-faila").innerHTML =
     `_${pismoNoBukviEN}-${pismoNoCifri}___${signalNo}`;
+  document.title = `_Пров._по_писмо_${pismoNoBukviEN}-${pismoNoCifri}_и_сигнал_${signalNo}`;
 
   // ============ ЗА АИДА ============
 
