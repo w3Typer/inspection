@@ -431,8 +431,10 @@ Pismo_${pismoNoBukviEN}-${pismoNoCifri}_${pismoData} <br /><br />
 
   // ============ ЗА ИМЕТО НА ФАЙЛА ============
   document.getElementById("ime-na-faila").innerHTML =
-    `__${pismoNoBukviEN}-${pismoNoCifri}__${signalNo}__`;
-  document.title = `_Пров._по_писмо_${pismoNoBukviBG}-${pismoNoCifri}_и_сигнал_${signalNo}`;
+ //   `__${pismoNoBukviEN}-${pismoNoCifri}__${signalNo}__`;
+      `${pismoNoBukviEN}-${pismoNoCifri}_${signalNo}`;
+//  document.title = `_Пров._по_писмо_${pismoNoBukviBG}-${pismoNoCifri}_и_сигнал_${signalNo}`;
+  document.title = `${pismoNoBukviBG}-${pismoNoCifri}_${signalNo}`;
 
   // ============ ЗА АИДА ============
 
