@@ -143,7 +143,7 @@ submitDataBtn.addEventListener("click", (e) => {
 
   document.getElementById("pismo-do-druj").innerHTML =
     ` <b>~ ~ ~ Относно ~ ~ ~</b>  <br />
-Проверка на КРС по сигнал №${signalNo}/${signalData} от ${jalbImena} <br /><br />
+Пров. по с-л №${signalNo} от ${jalbImena} <br /><br />
  <b>~ ~ ~ Начало на писмото ~ ~ ~</b> <br />
 Здравейте! <br />
 Моля, по повод извършвана от Комисията за регулиране на съобщенията ${provVid11}проверка по сигнал № ${signalNo}/${signalData} г. от ${sykrashtenie} ${jalbImena} (${jalbDanni1}${jalbDanni2}${jalbDanni3}) за ${provOtnosnoBG}, в срок до ${drujSrok} г. да предоставите писмено становище по случая, включващо отговори на поставените по-долу въпроси, копия на документи, служебни справки/извлечения от ИС, както и друга относима информация и документи в потвърждение на изложените твърдения:`;
